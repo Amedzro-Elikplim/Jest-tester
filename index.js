@@ -12,8 +12,13 @@ const reverseString = (str) => {
     return str.split('').reverse().join('');
 }
 
+const capitalize = (str) => {
+    return str.replace(/^\w/, (charac) => charac.toUpperCase());
+}
+
 
 module.exports = {
     stringLength,
-    reverseString
+    reverseString,
+    capitalize,
 };
