@@ -1,9 +1,9 @@
-const { stringLength, reverseString } = require('./index.js');
+const { stringLength, reverseString, capitalize } = require('./index.js');
 const Calculator = require('./Calculator.js');
 const exp = require('constants');
-const { expect } = require('@jest/globals');
+const { expect, test } = require('@jest/globals');
 
-describe('stringLength and reverse String test', () => {
+describe('stringLength, reverse String and capitalize test', () => {
     test("check length of string", () => {
       expect(stringLength("hello")).toEqual(5);
       expect(stringLength("developer")).toEqual(9);
@@ -18,6 +18,10 @@ describe('stringLength and reverse String test', () => {
       expect(reverseString("hello")).toBe("olleh");
       expect(reverseString("developer")).toBe("repoleved");
     });
+
+    test('Capitalize a given string', () => {
+        expect(capitalize('hello')).toBe('Hello');
+    })
 
 })
 
